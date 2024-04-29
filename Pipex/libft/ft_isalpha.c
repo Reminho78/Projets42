@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_last_bonus.c                                    :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: onault <onault@student.42.fr>              +#+  +:+       +#+        */
+/*   By: rcorroy <rcorroy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/17 11:43:58 by onault            #+#    #+#             */
-/*   Updated: 2024/02/17 15:40:29 by onault           ###   ########.fr       */
+/*   Created: 2024/02/13 13:11:49 by rcorroy           #+#    #+#             */
+/*   Updated: 2024/02/15 21:27:16 by rcorroy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+int	ft_isalpha(int c)
 {
-	if (!lst)
-		return (NULL);
-	while (lst->next != NULL)
-		lst = lst->next;
-	return (lst);
+	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+		return (1);
+	else
+		return (0);
 }
