@@ -6,7 +6,7 @@
 /*   By: rcorroy <rcorroy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 13:04:40 by rcorroy           #+#    #+#             */
-/*   Updated: 2024/04/26 18:13:45 by rcorroy          ###   ########.fr       */
+/*   Updated: 2024/05/01 13:43:54 by rcorroy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 long	ft_atoi(const char *str)
 {
 	long	result;
-	int	sign;
+	int		sign;
 
 	sign = 1;
 	result = 0;

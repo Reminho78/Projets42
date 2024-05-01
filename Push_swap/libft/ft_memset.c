@@ -6,22 +6,26 @@
 /*   By: rcorroy <rcorroy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 15:41:21 by rcorroy           #+#    #+#             */
-/*   Updated: 2024/02/26 13:59:42 by rcorroy          ###   ########.fr       */
+/*   Updated: 2024/05/01 13:39:29 by rcorroy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* memset remplit les n premiers octets de la zone de mémoire pointée par s avec 
+/* memset remplit les n premiers octets de la zone de mémoire pointée par s 
+avec 
 l'octet c. C'est une opération bas niveau qui ne tient pas compte du type des 
 données contenues dans la zone de mémoire ; elle opère purement sur une base 
 octet par octet. */
 
 /* Utilisation
-memset est largement utilisée pour initialiser des zones de mémoire à une valeur 
+memset est largement utilisée pour initialiser des zones de mémoire à une 
+valeur 
 spécifique avant leur utilisation. Par exemple, elle peut être utilisée pour 
-initialiser un tableau d'entiers à zéro, effacer une structure à des valeurs par défaut, 
-ou préparer un buffer de données à un état connu avant de le remplir avec des données. */
+initialiser un tableau d'entiers à zéro, effacer une structure à des valeurs par 
+défaut, 
+ou préparer un buffer de données à un état connu avant de le remplir avec des 
+données. */
 
 void	*ft_memset(void *b, int c, size_t len)
 {

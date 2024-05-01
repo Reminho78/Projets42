@@ -6,7 +6,7 @@
 /*   By: rcorroy <rcorroy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/15 12:27:34 by rcorroy           #+#    #+#             */
-/*   Updated: 2024/04/18 13:13:13 by rcorroy          ###   ########.fr       */
+/*   Updated: 2024/05/01 13:28:53 by rcorroy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 /* Elle est utilisée pour localiser la dernière occurrence 
 d'un caractère dans une chaîne. */
 
-char *ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
 

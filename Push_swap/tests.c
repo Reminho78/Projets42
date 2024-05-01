@@ -1,29 +1,29 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   tests.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rcorroy <rcorroy@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/05/01 13:58:10 by rcorroy           #+#    #+#             */
+/*   Updated: 2024/05/01 13:59:57 by rcorroy          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
-int	check_double(int ac, char **a, f_list **List)
+int	check_double(f_list *newNode, f_list *List)
 {
-	int i;
+	f_list	*current;
 
-	i = 3;
-	while(i < ac)
+	current = List;
+	while (1)
 	{
-		while(1)
-		{
-			f_list *current = *List;
-			if(atoi(a[i]) == current->value)
-				return 1;
-			current = current->next;
-			if (current == *List)
-				break;
-		}
-		i++;
+		if (newNode->value == current->value)
+			return (1);
+		current = current->next;
+		if (current == List)
+			break ;
 	}
-	return 0;
-}
-
-int main(int ac, char **av)
-{
-
-
-	return 0;
+	return (0);
 }

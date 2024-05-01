@@ -6,7 +6,7 @@
 /*   By: rcorroy <rcorroy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/15 17:20:13 by rcorroy           #+#    #+#             */
-/*   Updated: 2024/04/10 13:44:10 by rcorroy          ###   ########.fr       */
+/*   Updated: 2024/05/01 13:29:52 by rcorroy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,9 @@
 /* strnstr est utilisée pour rechercher une sous-chaîne (needle) dans une chaîne
  (haystack) mais en limitant la recherche à un certain nombre de caractères. */
 
-/*  Retourne un pointeur vers le premier caractère de la première occurrence de needle 
- dans haystack si needle est trouvé dans les len premiers caractères de haystack.
+/*  Retourne un pointeur vers le premier caractère de la première occurrence de
+needle dans haystack si needle est trouvé dans les len premiers caractères de
+haystack.
 Retourne NULL si needle n'est pas trouvé ou si needle est une chaîne vide. */
 
 char	*ft_strnstr(const char *str, const char *to_find, size_t len)

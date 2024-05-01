@@ -6,14 +6,14 @@
 /*   By: rcorroy <rcorroy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 18:50:20 by rcorroy           #+#    #+#             */
-/*   Updated: 2024/04/18 13:19:52 by rcorroy          ###   ########.fr       */
+/*   Updated: 2024/05/01 13:30:51 by rcorroy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* La fonction strjoin est typiquement utilisée pour créer une nouvelle chaîne de 
-caractères en joignant deux chaînes ou plus, souvent avec un caractère ou une 
+/* La fonction strjoin est typiquement utilisée pour créer une nouvelle chaîne
+de caractères en joignant deux chaînes ou plus, souvent avec un caractère ou une 
 chaîne de séparation spécifique entre chaque élément. */
 
 char	*ft_strjoin(char const *s1, char const *s2)

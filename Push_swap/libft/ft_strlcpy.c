@@ -6,13 +6,14 @@
 /*   By: rcorroy <rcorroy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 13:02:07 by rcorroy           #+#    #+#             */
-/*   Updated: 2024/04/18 13:10:26 by rcorroy          ###   ########.fr       */
+/*   Updated: 2024/05/01 13:30:27 by rcorroy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* strlcpy copie la chaîne src vers dst, incluant le caractère nul terminal, mais 
+/* strlcpy copie la chaîne src vers dst, incluant le caractère nul terminal,
+mais 
 ne copie pas plus de dstsize - 1 caractères. Cela garantit que dst est toujours 
 correctement terminée par un caractère nul, à condition que dstsize soit 
 supérieur à zéro.

@@ -1,6 +1,6 @@
 NAME = push_swap
 CC = gcc
-SRCS = push_swap.c push_swap_utils.c
+SRCS = push_swap.c push_swap_utils.c push_swap_utils2.c
 CFLAGS = -Wall -Wextra -Wextra -g
 OBJS = $(SRCS:.c=.o)
 MY_LIB = ./libft/libft.a

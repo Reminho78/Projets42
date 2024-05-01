@@ -6,11 +6,13 @@
 /*   By: rcorroy <rcorroy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 18:32:09 by rcorroy           #+#    #+#             */
-/*   Updated: 2024/02/25 20:51:17 by rcorroy          ###   ########.fr       */
+/*   Updated: 2024/05/01 13:44:54 by rcorroy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Contrairement à malloc, qui alloue simplement un bloc de mémoire sans initialiser son contenu, calloc alloue de la mémoire et initialise tous les bits à zéro.
+// Contrairement à malloc, qui alloue simplement un bloc de mémoire sans 
+// initialiser son contenu, calloc alloue de la mémoire et initialise tous 
+// les bits à zéro.
 
 #include "libft.h"
 

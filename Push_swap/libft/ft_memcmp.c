@@ -6,13 +6,14 @@
 /*   By: rcorroy <rcorroy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/15 16:27:16 by rcorroy           #+#    #+#             */
-/*   Updated: 2024/02/26 13:53:34 by rcorroy          ###   ########.fr       */
+/*   Updated: 2024/05/01 13:40:02 by rcorroy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Elle est utilisée pour comparer les n premiers octets de deux zones de mémoire.
+// Elle est utilisée pour comparer les n premiers octets de deux zones de 
+// mémoire.
 
 int
 	ft_memcmp(const void *s1, const void *s2, size_t n)

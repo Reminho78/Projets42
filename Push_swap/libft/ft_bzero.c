@@ -6,11 +6,12 @@
 /*   By: rcorroy <rcorroy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 18:27:45 by rcorroy           #+#    #+#             */
-/*   Updated: 2024/02/25 19:30:22 by rcorroy          ###   ########.fr       */
+/*   Updated: 2024/05/01 13:44:05 by rcorroy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// bzero écrit des octets de valeur zéro ('\0') dans les premiers n octets de la zone mémoire pointée par s.
+// bzero écrit des octets de valeur zéro ('\0') dans les premiers n 
+// octets de la zone mémoire pointée par s.
 
 #include "libft.h"
 

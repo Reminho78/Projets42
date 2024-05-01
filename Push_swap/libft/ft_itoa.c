@@ -6,49 +6,60 @@
 /*   By: rcorroy <rcorroy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 16:51:56 by rcorroy           #+#    #+#             */
-/*   Updated: 2024/04/26 15:25:06 by rcorroy          ###   ########.fr       */
+/*   Updated: 2024/05/01 13:51:28 by rcorroy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// La fonction itoa (Integer TO ASCII) est une fonction non standard de la bibliothèque C qui convertit un entier en une chaîne de caractères (string).
+// La fonction itoa (Integer TO ASCII) est une fonction non standard de la 
+// bibliothèque C qui convertit un entier en une chaîne de caractères (string).
 
 #include "libft.h"
 
-char *ft_itoa(int nbr) 
+char	*part2(int len, int nbr)
 {
-	if(nbr == -2147483648)
-		return("-2147483648\0");
-	int n = nbr;
-	int len = 0;
-	if (nbr <= 0)
-	{
-		len++;
-    	}
-	while (n) 
-	{
-		n /= 10;
-		len++;
-	}
-	char *result = (char *)malloc(sizeof(char) * (len + 1));
-	if (result == NULL) 
-		return NULL;
+	char	*result;
+
+	result = (char *)malloc(sizeof(char) * (len + 1));
+	if (result == NULL)
+		return (NULL);
 	result[len] = '\0';
 	if (nbr == 0)
 	{
 		result[0] = '0';
-		return(result);
+		return (result);
 	}
-	if (nbr < 0) 
+	if (nbr < 0)
 	{
 		result[0] = '-';
 		nbr = -nbr;
 	}
-	while (nbr) 
+	while (nbr)
 	{
 		result[--len] = nbr % 10 + '0';
 		nbr /= 10;
 	}
-	return result;
+	return (result);
+}
+
+char	*ft_itoa(int nbr)
+{
+	int	n;
+	int	len;
+
+	if (nbr == -2147483648)
+		return ("-2147483648\0");
+	n = nbr;
+	len = 0;
+	if (nbr <= 0)
+	{
+		len++;
+	}
+	while (n)
+	{
+		n /= 10;
+		len++;
+	}
+	return (part2(len, nbr));
 }
 
 /* int main()
