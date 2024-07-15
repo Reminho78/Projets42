@@ -1,6 +1,0 @@
-This is a simple text.
-This text contains the word mot.
-Another line without the keyword.
-mot is here again.
-mot is here again.
-f f
