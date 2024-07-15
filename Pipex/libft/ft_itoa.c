@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rcorroy <rcorroy@student.42.fr>            +#+  +:+       +#+        */
+/*   By: remidubenard <remidubenard@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 16:51:56 by rcorroy           #+#    #+#             */
-/*   Updated: 2024/02/25 20:53:06 by rcorroy          ###   ########.fr       */
+/*   Updated: 2024/07/14 20:11:39 by remidubenar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// La fonction itoa (Integer TO ASCII) est une fonction non standard de la bibliothèque C qui convertit un entier en une chaîne de caractères (string).
+// La fonction itoa (Integer TO ASCII) est une fonction non standard de la 
+// bibliothèque C qui convertit un entier en une chaîne de caractères (string).
 
 #include "libft.h"
 

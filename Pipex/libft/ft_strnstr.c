@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rcorroy <rcorroy@student.42.fr>            +#+  +:+       +#+        */
+/*   By: remidubenard <remidubenard@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/15 17:20:13 by rcorroy           #+#    #+#             */
-/*   Updated: 2024/04/10 13:44:10 by rcorroy          ###   ########.fr       */
+/*   Updated: 2024/07/14 20:22:48 by remidubenar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,10 @@
 /* strnstr est utilisée pour rechercher une sous-chaîne (needle) dans une chaîne
  (haystack) mais en limitant la recherche à un certain nombre de caractères. */
 
-/*  Retourne un pointeur vers le premier caractère de la première occurrence de needle 
- dans haystack si needle est trouvé dans les len premiers caractères de haystack.
-Retourne NULL si needle n'est pas trouvé ou si needle est une chaîne vide. */
+/*  Retourne un pointeur vers le premier caractère de la première occurrence de 
+needle dans haystack si needle est trouvé dans les len premiers caractères de
+haystack. Retourne NULL si needle n'est pas trouvé ou si needle est
+une chaîne vide. */
 
 char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 {

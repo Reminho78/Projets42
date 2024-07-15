@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rcorroy <rcorroy@student.42.fr>            +#+  +:+       +#+        */
+/*   By: remidubenard <remidubenard@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 18:27:45 by rcorroy           #+#    #+#             */
-/*   Updated: 2024/02/25 19:30:22 by rcorroy          ###   ########.fr       */
+/*   Updated: 2024/07/14 20:15:57 by remidubenar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// bzero écrit des octets de valeur zéro ('\0') dans les premiers n octets de la zone mémoire pointée par s.
+// bzero écrit des octets de valeur zéro ('\0') dans les premiers n 
+// octets de la zone mémoire pointée par s.
 
 #include "libft.h"
 

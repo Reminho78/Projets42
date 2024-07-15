@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rcorroy <rcorroy@student.42.fr>            +#+  +:+       +#+        */
+/*   By: remidubenard <remidubenard@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 18:32:09 by rcorroy           #+#    #+#             */
-/*   Updated: 2024/02/25 20:51:17 by rcorroy          ###   ########.fr       */
+/*   Updated: 2024/07/14 20:12:38 by remidubenar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Contrairement à malloc, qui alloue simplement un bloc de mémoire sans initialiser son contenu, calloc alloue de la mémoire et initialise tous les bits à zéro.
+// Contrairement à malloc, qui alloue simplement un bloc de mémoire sans 
+// initialiser son contenu, calloc alloue de la mémoire et initialise tous les
+// bits à zéro.
 
 #include "libft.h"
 
