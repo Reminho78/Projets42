@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rcorroy <rcorroy@student.42.fr>            +#+  +:+       +#+        */
+/*   By: remidubenard <remidubenard@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 12:25:26 by onault            #+#    #+#             */
-/*   Updated: 2024/02/26 13:13:21 by rcorroy          ###   ########.fr       */
+/*   Updated: 2024/08/27 18:24:49 by remidubenar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,19 +17,19 @@ paramètre, et de tous les éléments qui suivent, à
 l’aide de ’del’ et de free(3)
 Enfin, le pointeur initial doit être mis à NULL. */
 
-void	ft_lstclear(t_list **lst, void (*del)(void *))
-{
-	t_list	*ls;
+// void	ft_lstclear(t_stack **lst, void (*del)(void *))
+// {
+// 	t_stack	*ls;
 
-	ls = *lst;
-	if (!*lst)
-		return ;
-	while (ls != NULL)
-	{
-		*lst = ls->next;
-		del(ls->content);
-		free(ls);
-		ls = *lst;
-	}
-	*lst = NULL;
-}
+// 	ls = *lst;
+// 	if (!*lst)
+// 		return ;
+// 	while (ls != NULL)
+// 	{
+// 		*lst = ls->next;
+// 		del(ls->nbr);
+// 		free(ls);
+// 		ls = *lst;
+// 	}
+// 	*lst = NULL;
+// }

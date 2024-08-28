@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rcorroy <rcorroy@student.42.fr>            +#+  +:+       +#+        */
+/*   By: remidubenard <remidubenard@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 14:48:12 by onault            #+#    #+#             */
-/*   Updated: 2024/02/26 13:13:59 by rcorroy          ###   ########.fr       */
+/*   Updated: 2024/08/27 18:23:46 by remidubenar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,23 +17,22 @@
 liste résultant des applications successives de
 ’f’. La fonction ’del’ est là pour détruire le
 contenu d’un élément si nécessaire. */
+// t_stack	*ft_lstmap(t_stack *lst, void *(*f)(void *), void (*del)(void *))
+// {
+// 	t_stack	*newlst;
+// 	t_stack	*new;
 
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
-{
-	t_list	*newlst;
-	t_list	*new;
-
-	newlst = NULL;
-	while (lst)
-	{
-		new = ft_lstnew(f(lst->content));
-		if (!new)
-		{
-			ft_lstclear(&newlst, del);
-			return (NULL);
-		}
-		ft_lstadd_back(&newlst, new);
-		lst = lst->next;
-	}
-	return (newlst);
-}
+// 	newlst = NULL;
+// 	while (lst)
+// 	{
+// 		new = ft_lstnew(f(lst->nbr));
+// 		if (!new)
+// 		{
+// 			ft_lstclear(&newlst, del);
+// 			return (NULL);
+// 		}
+// 		ft_lstadd_back(&newlst, new);
+// 		lst = lst->next;
+// 	}
+// 	return (newlst);
+// }

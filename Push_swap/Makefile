@@ -1,7 +1,8 @@
 NAME = push_swap
 CC = gcc
-SRCS = push_swap.c push_swap_utils.c push_swap_utils2.c
-CFLAGS = -Wall -Wextra -Wextra -g
+SRCS = push_swap.c solver_utils_ba.c solver_utils_ab.c operations_1.c operations_2.c operations_3.c \
+		lst_utils.c ft_sort.c ft_rotate_type.c ft_rotate_and_push.c ft_check_utils.c algorithm.c
+CFLAGS = -Wall -Wextra -Werror -g
 OBJS = $(SRCS:.c=.o)
 MY_LIB = ./libft/libft.a
 MY_LIBDIR = ./libft/
@@ -12,8 +13,8 @@ $(MY_LIB):
 	@make -C $(MY_LIBDIR)
 
 $(NAME): $(MY_LIB) $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) $(MY_LIB) -g -o $(NAME)
-	
+	$(CC) $(CFLAGS) $(OBJS) -L$(MY_LIBDIR) -lft -o $(NAME)
+
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
@@ -26,6 +27,8 @@ fclean:
 	@rm -f $(OBJS)
 
 re: fclean all
+
+.PHONY: all clean fclean
 
 
 

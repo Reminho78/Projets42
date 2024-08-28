@@ -1,30 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lsadd_back_bonus.c                              :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rcorroy <rcorroy@student.42.fr>            +#+  +:+       +#+        */
+/*   By: remidubenard <remidubenard@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 11:48:18 by onault            #+#    #+#             */
-/*   Updated: 2024/02/26 13:12:35 by rcorroy          ###   ########.fr       */
+/*   Updated: 2024/08/27 17:33:15 by remidubenar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 // Ajoute l’élément ’new’ à la fin de la liste.
-
-void	ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_stack **stack, t_stack *stack_new)
 {
-	t_list	*live;
-
-	if (!*lst)
-	{
-		*lst = new;
+	if (!stack)
 		return ;
-	}
-	live = *lst;
-	while (live->next != NULL)
-		live = live->next;
-	live->next = new;
+	if (!*stack)
+		*stack = stack_new;
+	else
+		(ft_lstlast(*stack))->next = stack_new;
 }

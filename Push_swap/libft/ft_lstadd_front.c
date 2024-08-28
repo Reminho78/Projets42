@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rcorroy <rcorroy@student.42.fr>            +#+  +:+       +#+        */
+/*   By: remidubenard <remidubenard@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 11:10:40 by onault            #+#    #+#             */
-/*   Updated: 2024/02/26 13:10:41 by rcorroy          ###   ########.fr       */
+/*   Updated: 2024/08/27 17:17:29 by remidubenar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 // Ajoute l’élément ’new’ au début de la liste.
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstadd_front(t_stack **lst, t_stack *new)
 {
 	new->next = *lst;
 	*lst = new;

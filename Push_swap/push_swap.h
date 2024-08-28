@@ -5,50 +5,65 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rcorroy <rcorroy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/03 13:59:10 by rcorroy           #+#    #+#             */
-/*   Updated: 2024/05/01 14:42:08 by rcorroy          ###   ########.fr       */
+/*   Created: 2024/08/28 11:09:01 by rcorroy           #+#    #+#             */
+/*   Updated: 2024/08/28 11:09:03 by rcorroy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include "./libft/libft.h"
-# include <stddef.h>
-# include <stdlib.h>
 # include <unistd.h>
+# include <stddef.h>
 # include <stdio.h>
-# include <string.h>
-# include <stdarg.h>
+# include <stdlib.h>
+# include <stdbool.h>
+# include "libft/libft.h"
 
-typedef struct t_list2
-{
-	int				value;
-	int				index;
-	struct t_list2	*prev;
-	struct t_list2	*next;
-}	t_list2;
+void		alpha_check(char **argv);
+void		list_args(char **argv, t_stack **stack_a);
+void		ft_free(t_stack **lst);
+void		ft_ra(t_stack **a, int j);
+void		ft_rb(t_stack **b, int j);
+void		ft_sa(t_stack **a, int j);
+void		ft_pa(t_stack **a, t_stack **b, int j);
+void		ft_pb(t_stack **stack_a, t_stack **stack_b, int j);
+void		ft_rra(t_stack **a, int j);
+void		ft_ss(t_stack **a, t_stack **b, int j);
+void		ft_rr(t_stack **a, t_stack **b, int j);
+void		ft_rrr_sub(t_stack **b, int j);
+void		ft_rrr(t_stack **a, t_stack **b, int j);
+void		ft_sort(t_stack **stack_a);
+void		ft_sort_three(t_stack **stack_a);
+void		ft_rrb(t_stack **b, int j);
+void		ft_sb(t_stack **b, int j);
+void		ft_sort_b_till_3(t_stack **stack_a, t_stack **stack_b);
 
-typedef enum Liste
-{
-	LISTE_A,
-	LISTE_B,
-	LISTE_A_et_LISTE_B
-}	t_list_type;
+int			ft_checksorted(t_stack *stack_a);
+int			check_args(char **argv);
+int			check_error(char **argv, int i, int j);
+int			ft_checkdup(t_stack *a);
+int			ft_min(t_stack *a);
+int			ft_max(t_stack *a);
+int			ft_find_index(t_stack *a, int nbr);
+int			ft_find_place_b(t_stack *stack_b, int nbr_push);
+int			ft_find_place_a(t_stack *a, int nbr);
+int			ft_case_rarb_a(t_stack *a, t_stack *b, int c);
+int			ft_case_rrarrb_a(t_stack *a, t_stack *b, int c);
+int			ft_case_rarrb_a(t_stack *a, t_stack *b, int c);
+int			ft_case_rrarb_a(t_stack *a, t_stack *b, int c);
+int			ft_case_rarb(t_stack *a, t_stack *b, int c);
+int			ft_case_rrarrb(t_stack *a, t_stack *b, int c);
+int			ft_case_rrarb(t_stack *a, t_stack *b, int c);
+int			ft_case_rarrb(t_stack *a, t_stack *b, int c);
+int			ft_rotate_type_ab(t_stack *a, t_stack *b);
+int			ft_rotate_type_ba(t_stack *a, t_stack *b);
+int			ft_apply_rarb(t_stack **a, t_stack **b, int c, char s);
+int			ft_apply_rrarrb(t_stack **a, t_stack **b, int c, char s);
+int			ft_apply_rrarb(t_stack **a, t_stack **b, int c, char s);
+int			ft_apply_rarrb(t_stack **a, t_stack **b, int c, char s);
 
-t_list2	*create_node(int a, int index);
+t_stack		*ft_process(int argc, char **argv);
+t_stack		*ft_sub_process(char **argv);
 
-void	push_front_list(t_list2 **source, t_list2 **dest);
-void	print_lists(t_list2 *a, t_list2 *b);
-void	swap_firs_two(t_list2 **head, t_list2 **head2, t_list_type type);
-void	maj_index_list(t_list2 **head_ref);
-void	move_node(t_list2 **headA_ref, t_list2 **headB_ref, t_list_type type);
-void	shift_down(t_list2 **head_ref, t_list2 **head_ref2, t_list_type type);
-void	shift_up(t_list2 **head_ref, t_list2 **head_ref2, t_list_type type);
-void	arg_is_more_then_one(int ac, char **av, t_list2 **ListA);
-
-int		push_back(t_list2 **head, char *a, int index);
-int		arg_is_one(char *v, t_list2 **List);
-int		check_double(t_list2 *newNode, t_list2 **List);
-int		check_int_limits(char*a);
 #endif

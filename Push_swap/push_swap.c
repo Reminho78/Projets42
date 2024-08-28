@@ -5,35 +5,44 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rcorroy <rcorroy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/10 18:04:48 by rcorroy           #+#    #+#             */
-/*   Updated: 2024/05/01 14:44:57 by rcorroy          ###   ########.fr       */
+/*   Created: 2024/08/28 11:07:46 by rcorroy           #+#    #+#             */
+/*   Updated: 2024/08/28 11:25:16 by rcorroy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int ac, char**av)
+int	main(int argc, char **argv)
 {
-	t_list2	*lista;
-	t_list2	*listb;
+	t_stack	*a;
 
-	lista = NULL;
-	listb = NULL;
-	ft_printf("%d\n", ac);
-	if (ac == 2)
+	a = ft_process(argc, argv);
+	if (!a || ft_checkdup(a))
 	{
-		if (arg_is_one(av[1], &lista) == 1)
-			return (0);
+		ft_free(&a);
+		ft_error();
 	}
-	else
-		arg_is_more_then_one(ac, av, &lista);
-	// SwapFirstTwo(&lista); 
-	print_lists(lista, listb);
-	shift_down(&lista, &listb, LISTE_A);
-	print_lists(lista, listb);
-	swap_first_two(&lista, &listb, LISTE_A);
-	print_lists(lista, listb);
-	move_node(&lista, &listb, LISTE_A);
-	move_node(&lista, &listb, LISTE_A);
-	print_lists(lista, listb);
+	if (!ft_checksorted(a))
+		ft_sort(&a);
+	int i = 0;
+	t_stack *initial_a = a;
+	while(initial_a)
+	{
+		printf("number:%ld index: %ld\n", initial_a->nbr, initial_a->index);
+		initial_a = initial_a->next;
+		i++;
+	}
+	printf("nombre de nombres : %d\n", i);
+	ft_free(&a);
+	return (0);
 }
+
+	// int i = 0;
+	// t_stack *initial_a = a;
+	// while(initial_a)
+	// {
+	// 	printf("number:%ld index: %ld\n", initial_a->nbr, initial_a->index);
+	// 	initial_a = initial_a->next;
+	// 	i++;
+	// }
+	// printf("nombre de nombres : %d\n", i);

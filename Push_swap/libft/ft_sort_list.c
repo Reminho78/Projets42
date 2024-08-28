@@ -3,34 +3,34 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sort_list.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rcorroy <rcorroy@student.42.fr>            +#+  +:+       +#+        */
+/*   By: remidubenard <remidubenard@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/01 13:31:49 by rcorroy           #+#    #+#             */
-/*   Updated: 2024/05/01 13:33:14 by rcorroy          ###   ########.fr       */
+/*   Created: 2024/08/28 10:59:05 by remidubenar       #+#    #+#             */
+/*   Updated: 2024/08/28 10:59:13 by remidubenar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-t_list	*sort_list(t_list *lst, int (*cmp)(void*, void*))
-{
-	void	*swap;
-	t_list	*tmp;
+// t_stack	*sort_stack(t_stack *lst, int (*cmp)(void*, void*))
+// {
+// 	void	*swap;
+// 	t_stack	*tmp;
 
-	tmp = lst;
-	while (lst->next != NULL)
-	{
-		if (((*cmp)(lst->content, lst->next->content)) == 0)
-		{
-			swap = lst->content;
-			lst->content = lst->next->content;
-			lst->next->content = swap;
-			lst = tmp;
-		}
-		else
-			lst = lst->next;
-	}
-	lst = tmp;
-	return (lst);
-}
+// 	tmp = lst;
+// 	while (lst->next != NULL)
+// 	{
+// 		if (((*cmp)(lst->nbr, lst->next->nbr)) == 0)
+// 		{
+// 			swap = lst->nbr;
+// 			lst->nbr = lst->next->nbr;
+// 			lst->next->nbr = swap;
+// 			lst = tmp;
+// 		}
+// 		else
+// 			lst = lst->next;
+// 	}
+// 	lst = tmp;
+// 	return (lst);
+// }

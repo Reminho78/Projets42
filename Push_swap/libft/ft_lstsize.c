@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rcorroy <rcorroy@student.42.fr>            +#+  +:+       +#+        */
+/*   By: remidubenard <remidubenard@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 11:24:24 by onault            #+#    #+#             */
-/*   Updated: 2024/02/26 13:11:10 by rcorroy          ###   ########.fr       */
+/*   Updated: 2024/08/27 17:19:39 by remidubenar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,17 @@
 
 // Compte le nombre d’éléments de la liste.
 
-int	ft_lstsize(t_list *lst)
+int	ft_lstsize(t_stack *lst)
 {
-	size_t	size;
+	size_t	i;
 
-	size = 0;
+	i = 0;
 	if (!lst)
 		return (0);
-	while (lst->next != NULL)
+	while (lst)
 	{
-		size++;
 		lst = lst->next;
+		i++;
 	}
-	size++;
-	return (size);
+	return (i);
 }

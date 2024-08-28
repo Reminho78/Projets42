@@ -6,7 +6,7 @@
 /*   By: rcorroy <rcorroy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 15:54:34 by rcorroy           #+#    #+#             */
-/*   Updated: 2024/05/01 14:31:04 by rcorroy          ###   ########.fr       */
+/*   Updated: 2024/08/28 11:13:39 by rcorroy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,13 @@
 # include <stdarg.h>
 # include <fcntl.h>
 
-typedef struct s_list
+typedef struct s_stack
 {
-	void			*content;
-	struct s_list	*next;
-}	t_list;
+	long			nbr;
+	long			index;
+	struct s_stack	*next;
+	struct s_stack	*prev;
+}	t_stack;
 
 int		ft_strncmp(const char *f, const char *s, size_t len);
 int		ft_isdigit(int c);
@@ -41,7 +43,7 @@ long	ft_atoi(const char *str);
 int		ft_tolower(int character);
 int		ft_toupper(int character);
 int		ft_memcmp( const void *p1, const void *p2, size_t n);
-int		ft_lstsize(t_list *lst);
+int		ft_lstsize(t_stack *lst);
 int		ft_putnbr_fd(int n, int fd);
 int		ft_putnbr_base(size_t nbr, int is_upper);
 int		ft_putstr_fd(char *s, int fd);
@@ -67,11 +69,14 @@ void	*ft_memset(void *b, int c, size_t len);
 void	*ft_calloc(size_t count, size_t size);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
-void	ft_lstadd_back(t_list **lst, t_list *new);
-void	ft_lstadd_front(t_list **lst, t_list *new);
-void	ft_lstclear(t_list **lst, void (*del)(void *));
-void	ft_lstdelone(t_list *lst, void (*del)(void *));
-void	ft_lstiter(t_list *lst, void (*f)(void *));
+void	ft_lstadd_back(t_stack **stack, t_stack *stack_new);
+void	ft_lstadd_front(t_stack **lst, t_stack *new);
+void	ft_error(void);
+// void	ft_lstclear(t_stack **lst, void (*del)(void *));
+// void	ft_lstdelone(t_stack *lst, void (*del)(void *));
+// void	ft_lstiter(t_stack *lst, void (*f)(void *));
+// t_stack	*ft_lstmap(t_stack *lst, void *(*f)(void *), void (*del)(void *));
+// t_stack	*sort_stack(t_stack *lst, int (*cmp)(void*, void*));
 
 char	*get_next_line(int fd);
 char	*ft_itoa(int n);
@@ -85,9 +90,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
 
-t_list	*ft_lstlast(t_list *lst);
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
-t_list	*ft_lstnew(void *content);
-t_list	*sort_list(t_list *lst, int (*cmp)(void*, void*));
+t_stack	*ft_lstlast(t_stack *lst);
+t_stack	*ft_lstnew(int content);
 
 #endif
