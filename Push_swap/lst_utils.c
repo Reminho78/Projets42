@@ -6,19 +6,40 @@
 /*   By: rcorroy <rcorroy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 11:08:43 by rcorroy           #+#    #+#             */
-/*   Updated: 2024/08/28 11:58:34 by rcorroy          ###   ########.fr       */
+/*   Updated: 2024/09/30 01:22:47 by rcorroy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// This function checks the index of a number
-// 	 in the stack.
+// Cette fonction vérifie l'index d'un nombre dans la stack
+int	ft_find_index(t_stack *a, int nbr)
+{
+	int		i;
 
+	i = 0;
+	while (a->nbr != nbr)
+	{
+		i++;
+		a = a->next;
+	}
+	a->index = 0;
+	return (i);
+}
 
-// This function finds the correct place of the number in stack_b.
-// In other words, it check what index number nbr_push will get 
-// after it is being pushed to the stack_b.
+/* Cette fonction trouve la place correcte d’un nombre nbr_push dans la
+pile stack_b. Elle utilise plusieurs conditions pour déterminer où le
+nombre devrait être inséré :
+Si le nombre à insérer est entre le premier élément et le dernier de la pile
+(dans un ordre particulier), il est inséré à l’indice 0.
+Si le nombre est plus grand que le plus grand élément de la pile ou plus
+petit que le plus petit, il est inséré à la position du plus grand élément.
+Sinon, la fonction parcourt la pile à la recherche de l’endroit où nbr_push
+s’insérerait en respectant l’ordre de la pile.
+Objectif :
+Cette fonction est utilisée pour déterminer où un nombre doit être placé 
+dans la pile stack_b afin de maintenir un ordre correct, ce qui est crucial 
+dans un algorithme de tri par piles. */
 int	ft_find_place_b(t_stack *stack_b, int nbr_push)
 {
 	int		i;
@@ -42,9 +63,6 @@ int	ft_find_place_b(t_stack *stack_b, int nbr_push)
 	return (i);
 }
 
-// This function finds the correct place of the number in stack_a.
-// In other words, it check what index number nbr_push will get 
-// after it is being pushed to the stack_a.
 int	ft_find_place_a(t_stack *stack_a, int nbr_push)
 {
 	int		i;
@@ -68,8 +86,8 @@ int	ft_find_place_a(t_stack *stack_a, int nbr_push)
 	return (i);
 }
 
-// This function finds and returns the smallest number
-// in the given stack.
+// Cette fonction est utilisée pour identifier 
+// le plus petit élément dans une pile
 int	ft_min(t_stack *a)
 {
 	int		i;
@@ -84,8 +102,8 @@ int	ft_min(t_stack *a)
 	return (i);
 }
 
-// This function finds and returns the biggest number
-// in the given stack.
+// Cette fonction est utilisée pour identifier
+//le plus grand élément dans une pile
 int	ft_max(t_stack *a)
 {
 	int		i;

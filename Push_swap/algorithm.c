@@ -6,32 +6,13 @@
 /*   By: rcorroy <rcorroy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 11:08:15 by rcorroy           #+#    #+#             */
-/*   Updated: 2024/08/28 11:08:17 by rcorroy          ###   ########.fr       */
+/*   Updated: 2024/09/26 17:19:11 by rcorroy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// While arguments are valid, we start to add them 
-// into stack here one by one with while loop.
-// Atoi takes the number and turn it into an integer 
-// value where we can make math operations.
-// With stack new we create a new node for the current 
-// argument without linking it to list.
-// We make linking stage in ft_add_back call.
-void	list_args(char **argv, t_stack **stack_a)
-{
-	long	i;
-
-	i = 1;
-	while (argv[i] != NULL)
-	{
-		ft_lstadd_back(stack_a, ft_lstnew(ft_atoi(argv[i])));
-		i++;
-	}
-}
-
-// This function frees the stack.
+// Cette fonction vide la stack
 void	ft_free(t_stack **lst)
 {
 	t_stack	*tmp;
@@ -46,6 +27,7 @@ void	ft_free(t_stack **lst)
 	}
 }
 
+//Atoi plus strict
 int	ft_atoi2(const char *str)
 {
 	int				sign;
@@ -75,11 +57,10 @@ int	ft_atoi2(const char *str)
 	return (sign * result);
 }
 
-// This function works and sorts the stacks
-// in case of they are passed in between quotation
-// marks. In this scenario, this function takes the
-// string, and splits the numbers in order to create
-// seperated integer number.
+/* Cette fonction fonctionne dans le cas où il n'y aurait que 2 aruguments
+avec plusieurs nombre entre guillemet dans le 2e.Dans ce scénario,
+cette fonction prend la chaîne de caractères et sépare les nombres
+afin de créer des nombres entiers distincts. */
 t_stack	*ft_sub_process(char **argv)
 {
 	t_stack	*a;
@@ -103,13 +84,15 @@ t_stack	*ft_sub_process(char **argv)
 	return (a);
 }
 
-// This function does three things.
-// 1. It checks if the number of input is less than 2.
-// 2. It checks if the number of input is equal to 2.
-//    If it is, it means it is a quoted string. Call
-//	  another function. <ft_sub_process>
-// 3. It checks if the number of input is greater than 2.
-//     If it is, it lists the arguements.
+/* Cette fonction fait trois choses.
+1. Elle vérifie si le nombre d'entrées est inférieur à 2.
+
+2. Elle vérifie si le nombre d'entrées est égal à 2.
+Si c'est le cas, cela signifie qu'il s'agit d'une chaîne entre guillemets.
+Appeler une autre fonction. <ft_sub_process>
+
+3. Elle vérifie si le nombre d'entrées est supérieur à 2.
+Si c'est le cas, elle liste les arguments. */
 t_stack	*ft_process(int argc, char **argv)
 {
 	t_stack	*a;

@@ -6,17 +6,17 @@
 /*   By: rcorroy <rcorroy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 11:08:32 by rcorroy           #+#    #+#             */
-/*   Updated: 2024/08/28 11:08:34 by rcorroy          ###   ########.fr       */
+/*   Updated: 2024/09/26 17:44:33 by rcorroy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// This function calculate and decides which rotation
-// combination is best to use to sort the stack. Of
-// course, after rotation there is always one push
-// operation is left to do which i embeded to code.
-// Function is used during push from B to A.
+// Cette fonction calcule et décide quelle combinaison de rotations
+// est la meilleure pour trier la pile.
+// Bien sûr, après la rotation, il reste toujours une opération de push
+// à faire, qui est intégrée dans le code. Cette fonction est utilisée lors du
+// push de la pile B vers la pile A.
 int	ft_rotate_type_ba(t_stack *a, t_stack *b)
 {
 	int		i;
@@ -39,11 +39,11 @@ int	ft_rotate_type_ba(t_stack *a, t_stack *b)
 	return (i);
 }
 
-// This function calculate and decides which rotation
-// combination is best to use to sort the stack. Of
-// course, after rotation there is always one push
-// operation is left to do which i embeded to code.
-// Function is used during push from A to B.
+// Cette fonction calcule et décide quelle combinaison de rotations
+// est la meilleure pour trier la pile.
+// Bien sûr, après la rotation, il reste toujours une opération de push
+// à faire, qui est intégrée dans le code. Cette fonction est utilisée lors du
+// push de la pile A vers la pile B.
 int	ft_rotate_type_ab(t_stack *a, t_stack *b)
 {
 	int		i;
@@ -53,8 +53,8 @@ int	ft_rotate_type_ab(t_stack *a, t_stack *b)
 	i = ft_case_rrarrb(a, b, a->nbr);
 	while (tmp)
 	{
-		if (i > ft_case_rarb(a, b, tmp->nbr))
-			i = ft_case_rarb(a, b, tmp->nbr);
+		if (i > ft_rotate_simultane_ra_rb(a, b, tmp->nbr))
+			i = ft_rotate_simultane_ra_rb(a, b, tmp->nbr);
 		if (i > ft_case_rrarrb(a, b, tmp->nbr))
 			i = ft_case_rrarrb(a, b, tmp->nbr);
 		if (i > ft_case_rarrb(a, b, tmp->nbr))

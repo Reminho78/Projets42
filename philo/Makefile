@@ -3,47 +3,44 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: remidubenard <remidubenard@student.42.f    +#+  +:+       +#+         #
+#    By: rcorroy <rcorroy@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/07/15 13:11:20 by rcorroy       #+#    #+#              #
-#    Updated: 2024/07/15 13:11:23 by rcorroy      ###   ########.fr        #
+#    Created: 2024/09/02 14:59:00 by rcorroy           #+#    #+#              #
+#    Updated: 2024/09/03 16:58:02 by rcorroy          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = pipex
-BONUS = pipex_bonus
+NAME = philo
+BONUS = philo_bonus
 CC = gcc
-SRCS = pipex.c pipex_utils.c
-BONUS_SRCS = pipex_bonus.c pipex_bonus_utils.c pipex_utils.c
-CFLAGS = -Wall -Wextra -Werror -g
+SRCS = philo.c test.c 
+# philo_utils.c
+BONUS_SRCS = philo_bonus.c philo_bonus_utils.c philo_utils.c
+CFLAGS = -Wall -Wextra -pthread -fsanitize=thread -g
+# -Werror
 OBJS = $(SRCS:.c=.o)
 BONUS_OBJS = $(BONUS_SRCS:.c=.o)
-MY_LIB = ./libft/libft.a
-MY_LIBDIR = ./libft/
 
 all: $(NAME)
 
-$(MY_LIB):
-	@make -C $(MY_LIBDIR)
+$(NAME): $(OBJS)
+	$(CC) $(CFLAGS) $(OBJS) -g -o $(NAME)
 
-$(NAME): $(MY_LIB) $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) $(MY_LIB) -g -o $(NAME)
-
-bonus: $(MY_LIB) $(BONUS)
+bonus: $(BONUS)
 
 $(BONUS): $(BONUS_OBJS)
-	$(CC) $(CFLAGS) $(BONUS_OBJS) $(MY_LIB) -o $(BONUS)
+	$(CC) $(CFLAGS) $(BONUS_OBJS) -o $(BONUS)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	@rm -f $(OBJS) $(BONUS_OBJS)
-	@make -C $(MY_LIBDIR) clean
+	@make -C clean
 
 fclean: clean
 	@rm -f $(NAME) $(BONUS)
-	@make -C $(MY_LIBDIR) fclean
+	@make -C fclean
 
 re: fclean all
 

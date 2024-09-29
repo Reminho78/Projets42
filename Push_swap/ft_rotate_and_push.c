@@ -6,14 +6,14 @@
 /*   By: rcorroy <rcorroy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 11:08:27 by rcorroy           #+#    #+#             */
-/*   Updated: 2024/08/28 11:08:29 by rcorroy          ###   ########.fr       */
+/*   Updated: 2024/09/26 17:45:38 by rcorroy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// This function rotates both stack_a and stack_b
-// in the same direction as required amount.
+// Cette fonction fait tourner à la fois la pile_a et la pile_b
+// dans la même direction autant de fois que nécessaire.
 int	ft_apply_rarb(t_stack **a, t_stack **b, int c, char s)
 {
 	if (s == 'a')
@@ -39,8 +39,8 @@ int	ft_apply_rarb(t_stack **a, t_stack **b, int c, char s)
 	return (-1);
 }
 
-// This function rotate both stack_a and stack_b in the
-// reverse direction as required amount.
+// Cette fonction fait tourner les deux piles (pile_a et pile_b)
+// en sens inverse autant de fois que nécessaire.
 int	ft_apply_rrarrb(t_stack **a, t_stack **b, int c, char s)
 {
 	if (s == 'a')
@@ -66,8 +66,8 @@ int	ft_apply_rrarrb(t_stack **a, t_stack **b, int c, char s)
 	return (-1);
 }
 
-// This function rotate the stack_a in reverse direction,
-// the stack_b in oppsite direction of stack_a as required amount.
+// Cette fonction fait tourner la pile_a en sens inverse,
+// et la pile_b dans la direction opposée autant de fois que nécessaire.
 int	ft_apply_rrarb(t_stack **a, t_stack **b, int c, char s)
 {
 	if (s == 'a')
@@ -89,8 +89,8 @@ int	ft_apply_rrarb(t_stack **a, t_stack **b, int c, char s)
 	return (-1);
 }
 
-// This function rotate the stack_b in reverse direction,
-// the stack_a in oppsite direction of stack_a as required amount.
+// Cette fonction fait tourner la pile_b en sens inverse,
+// et la pile_a dans la direction opposée autant de fois que nécessaire.
 int	ft_apply_rarrb(t_stack **a, t_stack **b, int c, char s)
 {
 	if (s == 'a')

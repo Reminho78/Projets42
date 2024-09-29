@@ -6,13 +6,15 @@
 /*   By: rcorroy <rcorroy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 11:08:21 by rcorroy           #+#    #+#             */
-/*   Updated: 2024/08/28 11:08:23 by rcorroy          ###   ########.fr       */
+/*   Updated: 2024/09/24 20:17:56 by rcorroy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-//function to check if given arguments is valid
+//Cette fonction s’assure que chaque argument est bien un nombre entier valide
+//éventuellement précédé par un “+” ou un “-”) et qu’il ne contient pas de
+// caractères non autorisés.
 int	check_error(char **argv, int i, int j)
 {
 	while (argv[i])
@@ -24,7 +26,7 @@ int	check_error(char **argv, int i, int j)
 			{
 				j++;
 				if (!ft_isdigit(argv[i][j]))
-					return (false);
+					return (0);
 			}
 			else if (ft_isdigit(argv[i][j]))
 			{
@@ -32,13 +34,13 @@ int	check_error(char **argv, int i, int j)
 				if (argv[i][j] == '\0')
 					break ;
 				if (!ft_isdigit(argv[i][j]) && (argv[i][j] != ' '))
-					return (false);
+					return (0);
 			}
 			j++;
 		}
 		i++;
 	}
-	return (true);
+	return (1);
 }
 
 //Here arguments are send to make ASCII check
@@ -67,13 +69,13 @@ void	alpha_check(char **argv)
 int	check_args(char **argv)
 {
 	alpha_check(argv);
-	if (!check_error(argv, 1, 0))
-		return (false);
-	return (true);
+	if (check_error(argv, 1, 0) == 0)
+		return (0);
+	return (1);
 }
 
-// This function checks if the stack includes
-// any duplicate numbers.
+// Cette fonction vérifie que la stack ne contient aucun
+// nombre en double
 int	ft_checkdup(t_stack *a)
 {
 	t_stack	*tmp;
@@ -92,7 +94,7 @@ int	ft_checkdup(t_stack *a)
 	return (0);
 }
 
-// This function checks if the stack is sorted.
+// Cette fonction vérifie que la stack est bien triée
 int	ft_checksorted(t_stack *stack_a)
 {
 	int	i;
