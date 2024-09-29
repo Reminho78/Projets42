@@ -2,10 +2,9 @@
 NAME := fdf
 
 # Compilateur et flags
-CC := gcc
-CFLAGS := -Wextra -Wall -Werror -Wunreachable-code -g
-LDFLAGS := -Iinclude -ldl -lglfw -pthread -lm
-# LDFLAGS := -framework Cocoa -framework OpenGL -framework IOKit -L/opt/homebrew/lib -lglfw
+CC := clang
+CFLAGS := -Wextra -Wall -Werror -Wunreachable-code -fsanitize=address -g
+LDFLAGS := -pthread -framework Cocoa -framework OpenGL -framework IOKit -L/opt/homebrew/lib -lglfw
 
 # Chemins des bibliothèques et headers
 LIBMLX := ./MLX42
@@ -14,17 +13,20 @@ MY_LIBDIR := ./libft/
 HEADERS := -I ./include -I $(LIBMLX)/include
 
 # Sources et objets
-SRCS := fdf.c
+SRCS := fdf.c build_map.c draw_map.c draw_lines.c fdf_utils.c
 OBJS := $(SRCS:.c=.o)
 
 # Libs pour l'édition de liens
-LIBS := $(LIBMLX)/build/libmlx42.a -ldl -pthread -lm -L$(MY_LIBDIR) -lft
+LIBS := $(LIBMLX)/build/libmlx42.a -L$(MY_LIBDIR) -lft -ldl -pthread -lm
 
 # Règles de compilation
 all: libmlx $(MY_LIB) $(NAME)
 
 libmlx:
-	@cmake $(LIBMLX) -B $(LIBMLX)/build && make -C $(LIBMLX)/build -j4
+	@if [ ! -d "$(LIBMLX)/build" ]; then \
+		cmake -S $(LIBMLX) -B $(LIBMLX)/build; \
+	fi
+	@cmake --build $(LIBMLX)/build --parallel 4
 
 $(MY_LIB):
 	@make -C $(MY_LIBDIR)

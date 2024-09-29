@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: remidubenard <remidubenard@student.42.f    +#+  +:+       +#+        */
+/*   By: rcorroy <rcorroy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/17 11:10:40 by onault            #+#    #+#             */
-/*   Updated: 2024/08/27 17:17:29 by remidubenar      ###   ########.fr       */
+/*   Created: 2024/02/17 11:10:40 by rcorroy           #+#    #+#             */
+/*   Updated: 2024/09/29 13:59:15 by rcorroy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
