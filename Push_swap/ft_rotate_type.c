@@ -6,7 +6,7 @@
 /*   By: rcorroy <rcorroy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 11:08:32 by rcorroy           #+#    #+#             */
-/*   Updated: 2024/09/26 17:44:33 by rcorroy          ###   ########.fr       */
+/*   Updated: 2024/09/30 21:53:08 by rcorroy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 
 // Cette fonction calcule et décide quelle combinaison de rotations
 // est la meilleure pour trier la pile.
-// Bien sûr, après la rotation, il reste toujours une opération de push
-// à faire, qui est intégrée dans le code. Cette fonction est utilisée lors du
+// Cette fonction est utilisée lors du
 // push de la pile B vers la pile A.
 int	ft_rotate_type_ba(t_stack *a, t_stack *b)
 {
@@ -41,8 +40,7 @@ int	ft_rotate_type_ba(t_stack *a, t_stack *b)
 
 // Cette fonction calcule et décide quelle combinaison de rotations
 // est la meilleure pour trier la pile.
-// Bien sûr, après la rotation, il reste toujours une opération de push
-// à faire, qui est intégrée dans le code. Cette fonction est utilisée lors du
+// Cette fonction est utilisée lors du
 // push de la pile A vers la pile B.
 int	ft_rotate_type_ab(t_stack *a, t_stack *b)
 {

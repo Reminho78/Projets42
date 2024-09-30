@@ -6,7 +6,7 @@
 /*   By: rcorroy <rcorroy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 11:08:15 by rcorroy           #+#    #+#             */
-/*   Updated: 2024/09/26 17:19:11 by rcorroy          ###   ########.fr       */
+/*   Updated: 2024/09/30 20:47:05 by rcorroy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ int	ft_atoi2(const char *str)
 /* Cette fonction fonctionne dans le cas où il n'y aurait que 2 aruguments
 avec plusieurs nombre entre guillemet dans le 2e.Dans ce scénario,
 cette fonction prend la chaîne de caractères et sépare les nombres
-afin de créer des nombres entiers distincts. */
+afin de créer des nombres distincts. */
 t_stack	*ft_sub_process(char **argv)
 {
 	t_stack	*a;
@@ -86,11 +86,9 @@ t_stack	*ft_sub_process(char **argv)
 
 /* Cette fonction fait trois choses.
 1. Elle vérifie si le nombre d'entrées est inférieur à 2.
-
 2. Elle vérifie si le nombre d'entrées est égal à 2.
 Si c'est le cas, cela signifie qu'il s'agit d'une chaîne entre guillemets.
 Appeler une autre fonction. <ft_sub_process>
-
 3. Elle vérifie si le nombre d'entrées est supérieur à 2.
 Si c'est le cas, elle liste les arguments. */
 t_stack	*ft_process(int argc, char **argv)

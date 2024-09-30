@@ -6,7 +6,7 @@
 /*   By: rcorroy <rcorroy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 11:08:27 by rcorroy           #+#    #+#             */
-/*   Updated: 2024/09/26 17:45:38 by rcorroy          ###   ########.fr       */
+/*   Updated: 2024/09/30 20:54:04 by rcorroy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 // Cette fonction fait tourner à la fois la pile_a et la pile_b
 // dans la même direction autant de fois que nécessaire.
-int	ft_apply_rarb(t_stack **a, t_stack **b, int c, char s)
+int	ft_ra_rb(t_stack **a, t_stack **b, int c, char s)
 {
 	if (s == 'a')
 	{
@@ -41,7 +41,7 @@ int	ft_apply_rarb(t_stack **a, t_stack **b, int c, char s)
 
 // Cette fonction fait tourner les deux piles (pile_a et pile_b)
 // en sens inverse autant de fois que nécessaire.
-int	ft_apply_rrarrb(t_stack **a, t_stack **b, int c, char s)
+int	ft_rra_rrb(t_stack **a, t_stack **b, int c, char s)
 {
 	if (s == 'a')
 	{
@@ -68,7 +68,7 @@ int	ft_apply_rrarrb(t_stack **a, t_stack **b, int c, char s)
 
 // Cette fonction fait tourner la pile_a en sens inverse,
 // et la pile_b dans la direction opposée autant de fois que nécessaire.
-int	ft_apply_rrarb(t_stack **a, t_stack **b, int c, char s)
+int	ft_rra_rb(t_stack **a, t_stack **b, int c, char s)
 {
 	if (s == 'a')
 	{
@@ -91,7 +91,7 @@ int	ft_apply_rrarb(t_stack **a, t_stack **b, int c, char s)
 
 // Cette fonction fait tourner la pile_b en sens inverse,
 // et la pile_a dans la direction opposée autant de fois que nécessaire.
-int	ft_apply_rarrb(t_stack **a, t_stack **b, int c, char s)
+int	ft_ra_rrb(t_stack **a, t_stack **b, int c, char s)
 {
 	if (s == 'a')
 	{

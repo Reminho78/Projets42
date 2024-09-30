@@ -6,7 +6,7 @@
 /*   By: rcorroy <rcorroy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 11:09:01 by rcorroy           #+#    #+#             */
-/*   Updated: 2024/09/30 01:24:04 by rcorroy          ###   ########.fr       */
+/*   Updated: 2024/09/30 21:56:17 by rcorroy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void		ft_sort(t_stack **stack_a);
 void		ft_sort_three(t_stack **stack_a);
 void		ft_rrb(t_stack **b, int j);
 void		ft_sb(t_stack **b, int j);
-void		ft_sort_and_mouve_b_till_3(t_stack **stack_a, t_stack **stack_b);
+void		ft_sort_and_mouv_until_3(t_stack **stack_a, t_stack **stack_b);
 
 int			ft_checksorted(t_stack *stack_a);
 int			check_args(char **argv);
@@ -58,10 +58,10 @@ int			ft_case_rrarb(t_stack *a, t_stack *b, int c);
 int			ft_case_rarrb(t_stack *a, t_stack *b, int c);
 int			ft_rotate_type_ab(t_stack *a, t_stack *b);
 int			ft_rotate_type_ba(t_stack *a, t_stack *b);
-int			ft_apply_rarb(t_stack **a, t_stack **b, int c, char s);
-int			ft_apply_rrarrb(t_stack **a, t_stack **b, int c, char s);
-int			ft_apply_rrarb(t_stack **a, t_stack **b, int c, char s);
-int			ft_apply_rarrb(t_stack **a, t_stack **b, int c, char s);
+int			ft_ra_rb(t_stack **a, t_stack **b, int c, char s);
+int			ft_rra_rrb(t_stack **a, t_stack **b, int c, char s);
+int			ft_rra_rb(t_stack **a, t_stack **b, int c, char s);
+int			ft_ra_rrb(t_stack **a, t_stack **b, int c, char s);
 
 t_stack		*ft_process(int argc, char **argv);
 t_stack		*ft_sub_process(char **argv);

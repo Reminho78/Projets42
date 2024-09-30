@@ -1,8 +1,8 @@
 NAME = push_swap
 CC = gcc
-SRCS = push_swap.c solver_utils_ba.c solver_utils_ab.c operations_1.c operations_2.c operations_3.c \
-		lst_utils.c ft_sort.c ft_rotate_type.c ft_rotate_and_push.c ft_check_utils.c algorithm.c
-CFLAGS = -Wall -Wextra -Werror -g
+SRCS = push_swap.c ft_rotation_calculations_ab.c ft_rotation_calculations_ba.c operations_1.c operations_2.c operations_3.c \
+		optimize_rotates.c ft_sort.c ft_rotate_type.c ft_rotate.c ft_check_utils.c algorithm.c
+CFLAGS = -Wall -Wextra -Werror -fsanitize=address -g
 OBJS = $(SRCS:.c=.o)
 MY_LIB = ./libft/libft.a
 MY_LIBDIR = ./libft/

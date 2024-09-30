@@ -6,7 +6,7 @@
 /*   By: rcorroy <rcorroy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 11:08:21 by rcorroy           #+#    #+#             */
-/*   Updated: 2024/09/24 20:17:56 by rcorroy          ###   ########.fr       */
+/*   Updated: 2024/09/30 20:45:54 by rcorroy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,6 @@ int	check_error(char **argv, int i, int j)
 	return (1);
 }
 
-//Here arguments are send to make ASCII check
-//regarding the alphanumeric values
 void	alpha_check(char **argv)
 {
 	int	i;
@@ -64,8 +62,6 @@ void	alpha_check(char **argv)
 	}
 }
 
-//With this function it is checked 
-//whether arguments include alfanumeric or not
 int	check_args(char **argv)
 {
 	alpha_check(argv);
@@ -74,8 +70,6 @@ int	check_args(char **argv)
 	return (1);
 }
 
-// Cette fonction vérifie que la stack ne contient aucun
-// nombre en double
 int	ft_checkdup(t_stack *a)
 {
 	t_stack	*tmp;
@@ -94,7 +88,6 @@ int	ft_checkdup(t_stack *a)
 	return (0);
 }
 
-// Cette fonction vérifie que la stack est bien triée
 int	ft_checksorted(t_stack *stack_a)
 {
 	int	i;

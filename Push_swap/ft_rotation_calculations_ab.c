@@ -1,23 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   solver_utils_ab.c                                  :+:      :+:    :+:   */
+/*   ft_rotation_calculations_ab.c                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rcorroy <rcorroy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 11:07:38 by rcorroy           #+#    #+#             */
-/*   Updated: 2024/09/30 01:24:17 by rcorroy          ###   ########.fr       */
+/*   Updated: 2024/09/30 22:16:08 by rcorroy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// Ces fonctions calculent combien de fois nous devons
-// faire pivoter les piles ensemble.
-
-// Parce qu'après un certain nombre de rotations, nous allons
-// procéder uniquement avec la rotation d'une seule pile.
-//i correspond au nombre de rotations
+//  L’objectif est de calculer le nombre minimal de rotations nécessaires pour
+//  placer un élément spécifique dans sa position correctedans les deux piles,
+// en tenant compte de différentes combinaisons de rotations
 int	ft_rotate_simultane_ra_rb(t_stack *a, t_stack *b, int c)
 {
 	int	i;
@@ -28,8 +25,6 @@ int	ft_rotate_simultane_ra_rb(t_stack *a, t_stack *b, int c)
 	return (i);
 }
 
-// Parce qu'après un certain nombre de rotations, nous allons
-// procéder uniquement avec une seule rotation de pile.
 // Ici, au lieu de vérifier avec le numéro d'index normal,
 // nous utilisons la rotation inverse,
 // c'est-à-dire l'index inverse, qui est calculé en faisant la taille
